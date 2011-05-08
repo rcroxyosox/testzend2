@@ -2,6 +2,17 @@
 <head>
 <title>Test Zend 2</title>
 <?php echo $this->headLink()->appendStylesheet('/css/style.css') ?>
+<?php echo $this->headScript()->appendFile('/js/jquery-1.6.min.js','text/javascript'); ?>
+<script>
+$(document).ready(function(){
+   $("#logoname a").hover(function(){
+       $("#tagline").animate({'font-size':'50px'}, 370);
+   },function(){
+       $("#tagline").animate({'font-size':'8px'});
+   }) 
+});
+
+</script>
 </head>
 <body>
 <div id="header">
